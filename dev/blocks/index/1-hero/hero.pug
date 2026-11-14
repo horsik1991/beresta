@@ -2,11 +2,12 @@ section.hero
     h1.hero__title Береста
     .hero__img
         img(src="" alt="Пример работы" width="330px" height="400px")
-    h2.hero__subtitle Выберите вещь, которая станет любимой
-    p.hero__text Декор и подарки из дерева. Вырезаем изящные узоры, гравируем Ваши самые тёплые слова, сохраняя природную текстуру(?).
-    a.hero__link(href="catalog.html") Смотреть Каталог
-    a.hero__constructor (круглая кнопка)
-    ul.hero__advantages
-    - var heroText = ['Натуральноедерево и выразительная фактура','ТОчная резка и чёткая гравировка','От одного подарка до целой коллекции']
-        each text in heroText
-            li.hero__item= heroText
+    .hero__container
+        h2.hero__subtitle Выберите вещь, которая станет любимой
+        p.hero__text Декор и подарки из дерева. Вырезаем изящные узоры, гравируем Ваши самые тёплые слова, сохраняя природную текстуру(?).
+        a.hero__link(href="catalog.html") Смотреть Каталог
+        a.hero__constructor (круглая кнопка)
+        ul.hero__advantages
+        - var heroText = ['Натуральноедерево и выразительная фактура','ТОчная резка и чёткая гравировка','От одного подарка до целой коллекции']
+            each text in heroText
+                li.hero__item= heroText
