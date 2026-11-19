@@ -1,0 +1,42 @@
+//buttons
+.btnGreen
+	background-color $green
+	border-radius 5px
+	color $beige
+	line-height 1.2
+	font-weight 700
+	font-size 14px
+	outline 2px solid $green
+	padding 10px 30px
+	position relative
+	transition: all 0.4s ease
+	&:hover
+		background-color $beige
+		color $green
+		transition: all 0.4s ease
+		cursor pointer
+	&:focus-visible
+		outline 2px solid $accentColor
+		outline-offset 3px
+	&:active
+		background-color: $accentColor
+		color $beige
+		outline 2px solid darken($green, 10%)
+	&:disabled
+		user-select: none
+		background-color #aaaaaa
+		color darken(#aaa,25%)
+	@media (max-width: 768px)
+		padding: 18px  
+.no-click
+	pointer-events: none
+	cursor default
+	color: #fff
+	background-color #aaa
+	line-height 1.2
+	font-weight 700
+	font-size 14px
+	outline 2px solid darken(#aaa,25%)
+	padding 10px 30px
+	border-radius: 5px
+	user-select: none

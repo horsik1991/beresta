@@ -1,1 +1,116 @@
+.header
+	background-color $beige
+	color: $fontDarkBrown
+	position sticky
+	font-size 14px
+	font-weight 400
+	top 0
+	z-index 1000
+	&:after
+		content: ""
+		position absolute
+		width 100%
+		height 2px
+		background-color $darkBeige
+		bottom 0
+	&__container
+		display flex
+		justify-content space-between
+		align-items center
+		min-height: 80px
+		height 100%
+		position relative
+	&__constructor-btn
+		font-size: clamp(0.75rem, 1.6vw, 1.25rem)
+		white-space: nowrap;
+		@media(max-width 380px)
+			display none
+	&--isSticky
+		background-color: rgba($beige, 0.75) /* Полупрозрачный белый */
+		backdrop-filter: blur(5px) /* Матовое стекло */
+		box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1) /* Лёгкая тень */
+		border-bottom-color: rgba(0, 0, 0, 0.08)
+
+.header-logo
+	display flex
+	column-gap 10px
+	align-items center
+	max-width 250px
+	min-width 150px
+	@media(max-width 900px)
+		flex-wrap wrap
+	&__title
+		font-weight 700
+		font-size 18px
+	&__text
+		font-size 10px
+		@media(max-width 770px)
+			display none
+
+.header-menu
+	display flex
+	@media(max-width 767px)
+		display none
+		position absolute
+		left: 80%
+		top: 50px
+		z-index: 2
+		background-color: $darkBeige
+		padding: 5px
+		line-height: 1.5
+	&__list
+		display flex
+		column-gap: 20px 
+		column-gap clamp(0.75rem, 2vw, 2rem)
+		padding: 0 10px
+		&--mobile
+			display block
+			text-align: right
+	&__link
+		position relative
+		@media (hover hover) and (pointer fine)
+			&:after, 
+			&:before
+				content ''
+				position absolute
+				width 100%
+				height 2px
+				background linear-gradient(to right, $green, $accentColor)
+				bottom -5px
+				left 0
+				transform scaleX(0)
+				transform-origin right
+				transition transform 0.4s ease-out
+			&:before
+				top -5px
+				transform-origin left
+			&:hover
+				&:after, 
+				&:before
+					transform scaleX(1)
+
+.burger
+	display none
+	@media (max-width 767px)
+		display grid
+		grid-template-rows 1fr 1fr 1fr
+		width 23px
+		row-gap 5px
+	&:hover
+		cursor: pointer
+		>span
+			background-color $fontDarkBrown
+	&__span
+		display block
+		background-color $fontDarkBrown
+		height 3px
+		border-radius: 5px
+		width 23px
+		transition transform 0.3s ease-out
+		&--transform1
+			transform: rotate(45deg) translate(4px)
+			transition transform 0.3s ease-out
+		&--transform2
+			transform: rotate(-45deg) translate(4px,-3px)
+			transition transform 0.3s ease-out
 
