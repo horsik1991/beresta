@@ -31,7 +31,7 @@ export const path = {
         pug:`${srcFolder}/pages/*.pug`,
         js:`${srcFolder}/blocks/**/*.js`,
         jsModule:`${srcFolder}/static/js/modules/**/*.js`,
-        img:`${srcFolder}/static/img/**/*.{jpg,jpeg,png,bmp,webp,gif}`,
+        img:`${srcFolder}/static/img/**/*.{jpg,jpeg,png,bmp,webp,gif,svg}`,
         svg:`${srcFolder}/static/img/**/*.svg`,
         
     },
