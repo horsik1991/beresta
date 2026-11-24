@@ -12,10 +12,10 @@ export const styles = ()=>{
     .pipe(app.plugins.replace(/@img\//g, '../img/'))
     
     .pipe(app.plugins.groupmedia())
-    .pipe(app.plugins.webpcss({
-        webpClass: '.webp',
-        noWebpClass:'.no-webp'
-    }))
+    // .pipe(app.plugins.webpcss({
+    //     webpClass: '.webp',
+    //     noWebpClass:'.no-webp'
+    // }))
     .pipe(app.plugins.pref({
         grid:true,
         cascade:true,

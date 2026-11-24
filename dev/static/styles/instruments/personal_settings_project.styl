@@ -4,7 +4,6 @@
 	border-radius 5px
 	color $beige
 	line-height 1.2
-	font-weight 700
 	font-size 14px
 	outline 2px solid $green
 	padding 10px 30px
@@ -28,6 +27,33 @@
 		color darken(#aaa,25%)
 	@media (max-width: 768px)
 		padding: 18px  
+.lineBtn
+	color $fontDarkBrown
+	font-weight 500
+	position relative
+	border-bottom 2px solid $green
+	padding 0 20px 10px 0
+	text-align left
+	&:hover
+		color $green
+		border-bottom 2px solid darken($darkBeige, 15%)
+		&:after
+			background-color $green
+			right -8px
+			transform scale(1.2)
+	&:after
+		content ''
+		mask-image: url('./@img/icons/common/arrow.svg');
+		position absolute
+		width 18px
+		height 18px
+		transition all 0.4s linear
+		background-color $fontDarkBrown
+		mask-size contain
+		mask-position center
+		mask-size 18px 18px
+		top 3px
+		right -3px
 .no-click
 	pointer-events: none
 	cursor default

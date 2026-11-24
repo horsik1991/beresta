@@ -1,5 +1,5 @@
 import imagemin from "gulp-imagemin"
-import webp from 'gulp-webp'
+//import webp from 'gulp-webp'
 export const images = ()=>{
     return app.gulp.src(app.path.src.img, { encoding: false })
     .pipe(app.plugins.newer(app.path.build.img))
@@ -14,6 +14,6 @@ export const images = ()=>{
     }))
     .pipe(app.gulp.dest(`${app.path.build.img}`))
     .pipe(app.plugins.bs.stream())
-    .pipe(webp())
+    //.pipe(webp())
     .pipe(app.gulp.dest(`${app.path.build.img}`))
 }
